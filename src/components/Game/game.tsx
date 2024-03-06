@@ -102,7 +102,7 @@ export default function Game(props: any) {
     
 
     return (
-        <div className="game-container flex-lg-row flex-md-column w-xl-75 w-lg-75 w-md-auto w-sm-auto w-auto">
+        <div className="game-container flex-column flex-md-column flex-lg-row col-12 col-md-11 col-lg-11 col-xl-10 col-xxl-8 py-3">
             <div className='hangman-image-container'>
 
                 {isBase ? <div className='base'>_______</div> : null}
@@ -122,12 +122,14 @@ export default function Game(props: any) {
             <div className='game-inner-container'>
                 <div className='statistic-container'>
 
-                    <div className='game-container-stats'>
+                    <div className='game-container-stats mb-3'>
                         <div className='game-container-stats-wins-losts'>
-                            {language === "EN" ? <span> Wins: <span className='wins'>{wins}</span></span> : <span >Победи: <span className='wins'>{wins}</span> </span>}
-                            {language === "EN" ? <span> Losts: <span className='text-danger font-weight-bold'>{losts}</span></span> : <span>Загуби: <span className='text-danger font-weight-bold'>{losts}</span> </span>}
+                            {language === "EN" ? <span> Recognized words: <span className='wins'>{wins}</span></span> : <span >Разпознати думи: <span className='wins'>{wins}</span> </span>}
+                            {language === "EN" ? <span> No recognized words: <span className='text-danger font-weight-bold'>{losts}</span></span> : <span>Не разпознати думи: <span className='text-danger font-weight-bold'>{losts}</span> </span>}
                         </div>
-                        {language === 'EN' ? <div>Life: <span className='game-life'>{life}</span></div> : <div>Живот: <span className='game-life'>{life}</span></div>}
+                        {language === 'EN' 
+                            ? <div>Life: <span className='text-success font-weight-bold'>{life}</span></div> 
+                            : <div>Живот: <span className='text-success font-weight-bold'>{life}</span></div>}
                     </div>
                     <div className='text-left'>
                         {language === 'EN' ? <span>All input letters: </span> : <span>Всички въведени букви: </span>}

@@ -17,13 +17,13 @@ export default function WinGame(props: any) {
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>{props.language === 'EN' ? 'Congratulation!' : 'Поздравление!'}</MDBModalTitle>
-              <MDBBtn className='btn-close' color='none' onClick={() => setWinGame(!winGame)}></MDBBtn>
+              <MDBModalTitle className='text-success'>{props.language === 'EN' ? 'Congratulation!' : 'Поздравление!'}</MDBModalTitle>
+              <MDBBtn className='btn-close text-dark' color='none' onClick={() => setWinGame(!winGame)}></MDBBtn>
             </MDBModalHeader>
-            <MDBModalBody>{props.language === 'EN' ? 'Win Game!' : 'Спечелихте Играта!'}</MDBModalBody>
+            <MDBModalBody className='text-success font-weight-bold'>{props.language === 'EN' ? 'Win Game!' : 'Спечелихте Играта!'}</MDBModalBody>
 
             <MDBModalFooter>
-              <MDBBtn color='secondary' onClick={() => setWinGame(!winGame)}>
+              <MDBBtn color='success' onClick={() => setWinGame(!winGame)}>
                 Close
               </MDBBtn>
             </MDBModalFooter>

@@ -52,7 +52,7 @@ function App() {
   };
 
   return (
-    <div className="App px-lg-0 px-md-3 px-sm-3 px-3">
+    <div className="App px-0">
         <Menu menuFunctions={menuFunctions}/>
 
         { gameStarted ? <Game options={gameOptions}/> : <div className='hide-container' ></div>}
