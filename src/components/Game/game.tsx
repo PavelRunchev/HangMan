@@ -128,8 +128,8 @@ export default function Game(props: any) {
                             {language === "EN" ? <span> No recognized words: <span className='text-danger font-weight-bold'>{losts}</span></span> : <span>Не разпознати думи: <span className='text-danger font-weight-bold'>{losts}</span> </span>}
                         </div>
                         {language === 'EN' 
-                            ? <div>Life: <span className='text-success font-weight-bold'>{life}</span></div> 
-                            : <div>Живот: <span className='text-success font-weight-bold'>{life}</span></div>}
+                            ? <div>{life === 1 ? 'Life' : "Life's"}: <span className='text-success font-weight-bold'>{life}</span></div> 
+                            : <div>{life === 1 ? 'Живот' : 'Живота'}: <span className='text-success font-weight-bold'>{life}</span></div>}
                     </div>
                     <div className='text-left'>
                         {language === 'EN' ? <span>All input letters: </span> : <span>Всички въведени букви: </span>}
